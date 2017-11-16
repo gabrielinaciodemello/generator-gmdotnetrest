@@ -1,0 +1,28 @@
+{
+  "name": "generator-gmdotnetrest",
+  "version": "1.0.0",
+  "description": "My personal Yeoman generator for dotnet rest webapi projects",
+  "files": [
+    "generators"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielinaciodemello/generator-gmdotnetrest.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "dotnet",
+    "webapi",
+    "rest",
+    "json"
+  ],
+  "author": "Gabriel Mello <gabrielinaciodemello@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielinaciodemello/generator-gmdotnetrest/issues"
+  },
+  "homepage": "https://github.com/gabrielinaciodemello/generator-gmdotnetrest#readme",
+  "dependencies": {
+    "yeoman-generator": "^1.0.0"
+  }
+}
