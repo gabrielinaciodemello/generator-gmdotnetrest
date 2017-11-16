@@ -26,10 +26,11 @@ namespace <%= ProjectName %>.Controllers
         }
 
         // GET api/values
+        // GET api/values?limit=10&page=0
         [HttpGet]
-        public virtual JsonResult Get() => _requestsHandler.JsonHandler(Request, Response, () => 
+        public virtual JsonResult Get(int? limit, int? page) => _requestsHandler.JsonHandler(Request, Response, () => 
         {
-            return new JsonReturn { Result = _repository.Get<T>() };
+            return new JsonReturn { Result = limit.HasValue && page.HasValue ? _repository.Get<T>(limit.Value, page.Value) : _repository.Get<T>() };
         });   
 
         // GET api/values/5

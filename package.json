@@ -1,6 +1,6 @@
 {
   "name": "generator-gmdotnetrest",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "My personal Yeoman generator for dotnet rest webapi projects",
   "files": [
     "generators"

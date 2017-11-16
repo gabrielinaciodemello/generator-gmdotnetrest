@@ -39,6 +39,11 @@ namespace <%= ProjectName %>.Repositories
             return _db.GetCollection<T>(CollectionName<T>()).Find(new BsonDocument()).ToEnumerable();
         }
 
+        public IEnumerable<T> Get<T>(int limit, int page) where T : Entity
+        {
+            return _db.GetCollection<T>(CollectionName<T>()).Find(new BsonDocument()).Skip(page*limit).Limit(limit).ToEnumerable();
+        }
+
         public T Get<T>(string id) where T : Entity
         {
             return _db.GetCollection<T>(CollectionName<T>()).Find(x => x.Id == id).FirstOrDefault();
