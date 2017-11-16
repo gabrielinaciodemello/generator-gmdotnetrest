@@ -48,7 +48,7 @@ Create new User.
 
 
 Do login.
-- POST for "api/login Body = { "Email": "user@user.com", "Password":"12345" }" and receive a Token
+- POST for "api/token Body = { "Email": "user@user.com", "Password":"12345" }" and receive a Token
 
 
 Do a request with authorization header.
