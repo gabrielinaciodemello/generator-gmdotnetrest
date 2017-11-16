@@ -7,42 +7,53 @@ My personal Yeoman generator for .Net Core REST WebApi projects.
 This generator is used to create a basic REST api project, and add new domain entities to the project from a Json file.
 When new domain entity is added, the generator create all the necerary classes to manage and validate requests for /api/entity-name (GET, POST, PUT and DELETE).
 
-The basic generated project uses:
+The basic project generated uses:
 
 [MongoDB C# Driver](https://github.com/mongodb/mongo-csharp-driver#readme) - For MongoDB database.
+
 [Fluent Validation](https://github.com/JeremySkinner/FluentValidation) - For entities validation rules.
+
 [System.IdentityModel.Tokens.Jwt](https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet#readme) - For JWT Bearer authentication.
 
 # Create new project
 
-Install Yeoman
+Install Yeoman.
 - npm install yo -g
 
-Install generator 
+
+Install generator. 
 - npm install generator-gmdotnetrest -g
 
-Create new project
+
+Create new project.
 - mkdir GeneratorTest
 - cd GeneratorTest
 - yo gmdotnetrest
 
-Restore packages 
+
+Restore packages. 
 - dotnet restore
 
-Start MongoDB Server 
 
-Start project
+Start MongoDB Server. 
+
+
+Start project.
 - dotnet run 
 - GET for "api/users" and receive 401 Unauthorized
 
-Create new User
+
+Create new User.
 - POST for "api/users  Body = { "Name": "User", "Email": "user@user.com", "Password":"12345" }"
 
-Do login
+
+Do login.
 - POST for "api/login Body = { "Email": "user@user.com", "Password":"12345" }" and receive a Token
 
-Make a request with authorization header
+
+Do a request with authorization header.
 - GET for "api/users Header = { "Authorization": "Bearer 'Token Received' }" and receive 200
+
 
 Have fun :)
 
@@ -90,8 +101,10 @@ Create a Json file like this:
   }
 ]
 
-In the root of your project 
+
+In the root of your project. 
 - yo gmdotnetrest:model "path of your JsonFile"
+
 
 Now your new entities can be managed by 
  - api/Schools (GET, POST, PUT, DELETE)
