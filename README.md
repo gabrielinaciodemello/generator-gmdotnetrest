@@ -116,3 +116,8 @@ Now your new entities can be managed by
 - Add option to create new domain entity without Controller and Validation classes.
 - Support FK validation rules for entities.
 - Support SQL databases.
+- Add option to extend classes.
+- Add option to specify Default values.
+- Add option to specify Value Objects.
+- Add optional parameters "Fields" and "Filter" for GET resquests.
+...
